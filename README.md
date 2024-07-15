@@ -1,5 +1,5 @@
 # Module10Logo
-# <Logo-Generator >
+
 
 ## Description
 
