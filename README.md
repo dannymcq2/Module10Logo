@@ -1,44 +1,45 @@
-# Module10Logo
+Description
 
-## Description
+My motivation was to create an organizer or planner to view and add departments, roles, and percentage of employees. I built this for managers of all kinds looking for a robust organizing tool. This project solves the problem of sloppy work and poor organization. Additionally, I learned more about using PostgreSQL during this project.
 
-My motivation to create this was to give a simple solution for a simple logo that someone needs quickly. I built this to help anyone in need of a logo or may need a template for ideas. This problem solves if someone may not be able to create a logo themselves or know anyone who can. I learned more about being able to work on generators to use.
+Table of Contents
 
-## Table of Contents 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [Features](#features)
-- [Tests](#tests)
-- [package.json](#packagejson)
+	•	Installation
+	•	Package JSON
+	•	Usage
+	•	Features
+	•	Tests
+	•	Credits
+	•	License
 
-## Installation
+Installation
 
-No need to install. Runs on command line, after the logo then will open up on browser. Using Node index.js to run on command line.
+To work with JSON data in SQL, you need to ensure you have the appropriate tools and packages installed. Below are instructions for a few common SQL environments:
 
-## Usage
+PostgreSQL
 
-For more details, refer to this [video](https://drive.google.com/file/d/13kJ-kPJ3kYPiRp4hmW9zyjsHLMGSsDRs/view?usp=sharing).
+PostgreSQL has built-in support for JSON. If you are using PostgreSQL, you don’t need to install anything additional to handle JSON data.
 
-## Credits
+MySQL
 
-## Features
+MySQL also supports JSON data types natively. Ensure you are using MySQL version 5.7.8 or higher.
 
-Creates a simple logo quickly from the command line. You will type up to 3 letters, choose a color for the text, a shape from circle, square or triangle then you will choose a color for shape. It will then create a svg file where you can open on browser to view + save.
+Creating Tables with JSON in PostgreSQL
 
-## Tests
+PostgreSQL supports JSON data types natively. You can create tables with JSON columns and use various functions to work with JSON data.
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    data JSONB
+);
 
-Command line
+INSERT INTO users (data) VALUES ('{"name": "John", "age": 30}');
+Package JSON
 
-## package.json
-
-Here is the `package.json` configuration for this project:
-
-```json
+Here is the package.json configuration for this project:
 {
-  "name": "logo-generator",
+  "name": "02-challenge",
   "version": "1.0.0",
+  "description": "## Your Task",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -46,9 +47,37 @@ Here is the `package.json` configuration for this project:
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "inquirer": "^10.0.1"
-  }
+    "inquirer": "^8.2.4",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {}
 }
+Usage
 
+For more details, refer to this video https://drive.google.com/file/d/1AdkT4f2UlrUbu-dmrC9eXakPhR067qNU/view
+
+
+
+
+
+
+Features
+
+	•	View and add employees, including their salary and roles.
+	•	Organize departments and roles efficiently.
+	•	Manage employee data with JSON columns in PostgreSQL.
+
+Tests
+
+Refer to connection.js for testing the database connection and other functionalities.
+
+Credits
+
+[Include any credits or acknowledgments here]
+
+License
+
+[Specify the license for your project here]
+
+This version should render correctly on most Markdown parsers, including GitHub. Make sure your file is saved with the .md extension and is properly named README.md.
